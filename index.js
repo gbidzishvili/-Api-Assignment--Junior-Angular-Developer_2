@@ -22,6 +22,7 @@ const  list=[
       status:"active"
 
     },
+   
     {
         mail:"chkadua@gmail.com",
         pn:"17054305678",
@@ -31,6 +32,16 @@ const  list=[
         category:"user_2",
         status:"status1"
         
+    },
+    {
+        mail:"bidz7@gmail.com",
+        pn:"12001034395",
+        name:"giorgi",
+        surname:"bidz",
+        birthDate:"15/05/2012",
+      category:"VIP User",
+      status:"active"
+
     },
     {
         mail:"ckhadadze@gmail.com",
@@ -93,7 +104,7 @@ const categories = [
     {user:"User_4"},
 ]
 statusArr=[
-    {status:'Active'},
+    {status:'active'},
     {status:'Blocked'},
     {status:'Suspended'},
     {status:'status1'},
@@ -104,12 +115,7 @@ statusArr=[
     {status:'status4'}
   ]
 
-  function validateCategory(category){
-    const schema = {
-        name:Joi.string().min(3).required()
-    }
-    return Joi.validate(category,schema);
-};
+
 app.get('/categories',(req,res)=>{
     res.send(categories)
 });
